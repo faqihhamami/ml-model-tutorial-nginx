@@ -14,7 +14,7 @@ pipeline {
 	   }
 	   stage('Run Image') {
 	        steps {
-	        sh 'docker run -d -p 5000:5000 --name mlmodel ml-model:v3'
+	        sh 'docker run -d -p 5000:5000 --name mlmodel3 ml-model:v3'
 	        }
 	   }
 	   stage('Testing'){
