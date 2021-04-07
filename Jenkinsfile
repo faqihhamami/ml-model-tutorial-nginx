@@ -9,12 +9,12 @@ pipeline {
 	   }
 	   stage('Build Image') {
 	        steps {
-	        sh 'docker build -t ml-model:v3 .'
+	        sh 'docker build -t ml-model:v4 .'
 	        }
 	   }
 	   stage('Run Image') {
 	        steps {
-	        sh 'docker run -d -p 5000:5000 --name mlmodel3 ml-model:v3'
+	        sh 'docker run -d -p 5000:5000 --name mlmodel4 ml-model:v4'
 	        }
 	   }
 	   stage('Testing'){
