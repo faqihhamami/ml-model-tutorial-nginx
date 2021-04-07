@@ -4,6 +4,10 @@ import joblib
 
 app = Flask(__name__)
 
+@app.route("/", methods=['GET'])
+def index():
+    return 'hello, welcome to docker jenkins'
+
 @app.route("/predict", methods=['POST'])
 def do_prediction():
     json = request.get_json()
